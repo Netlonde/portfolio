@@ -33,7 +33,7 @@ export const LeftContainer = styled.div<IProps>`
       align-items: center;
       justify-content: flex-start;
       flex-direction: column;
-      padding: 20px;
+      padding: 30px 20px;
 
       .imageContainer {
         margin: 5px 40px 10px 40px;
@@ -150,6 +150,7 @@ export const RightContainer = styled.div<IProps>`
         display: flex;
         align-items: center;
         justify-content: space-between;
+        margin-bottom: 30px;
       }
 
       .title {
@@ -205,7 +206,7 @@ export const RightContainer = styled.div<IProps>`
         color: ${isdarkcolor ? "#fff" : "rgba(40, 40, 40, 0.8)"};
         font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
           "Lucida Sans", Arial, sans-serif;
-        margin-bottom: 20px;
+        margin: 20px 0px;
       }
     `}
 `;
