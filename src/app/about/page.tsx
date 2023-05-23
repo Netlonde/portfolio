@@ -4,9 +4,10 @@ import { FaDownload, FaLinkedinIn, FaGithub, FaUser } from "react-icons/fa";
 import { RiWhatsappFill } from "react-icons/ri";
 import { SiGmail } from "react-icons/si";
 import Card from "@/components/Card/Card";
-import BackGround, { LeftContainer, RightContainer } from "./index.style";
+import BackGround, { LeftContainer } from "./index.style";
 import useHomeController from "./index.controller";
 import CustomButton from "../../components/CustomButton/CustomButton";
+import About from "@/components/About/About";
 
 export default function Home() {
   const {
@@ -68,24 +69,7 @@ export default function Home() {
           <CustomButton text="Dark ui" handleClick={handleClickDarkUi} />
         </div>
       </LeftContainer>
-
-      <RightContainer isdarkcolor={isDarkUi}>
-        <div className="header">
-          <h3 className="title">About</h3>
-          <div className="headButtonsContainer">
-            <button className="buttonText">Resume</button>
-            <button className="buttonText">Projects</button>
-          </div>
-        </div>
-        <div className="description">
-          {bio} In addition, I participate in a team that adopts the ceremonies
-          of the Scrum methodology in our development processes.
-        </div>
-        <main className="mainContainer">
-          <h3 className="mainTitle">What i am doing</h3>
-          <Card />
-        </main>
-      </RightContainer>
+      <About bio={bio} isDarkUi={isDarkUi} />
     </BackGround>
   );
 }
