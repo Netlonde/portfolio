@@ -8,6 +8,7 @@ import BackGround, { LeftContainer } from "./index.style";
 import useHomeController from "./index.controller";
 import CustomButton from "../../components/CustomButton/CustomButton";
 import About from "@/components/About/About";
+import Projects from "@/components/Projects/Projects";
 
 export default function Home() {
   const {
@@ -17,6 +18,10 @@ export default function Home() {
     bio,
     handleClickDarkUi,
     handleClickIcon,
+    isAboutOPen,
+    isProjectsOpen,
+    handleAboutPageOpen,
+    handleProjectsPageOpen,
     isDarkUi,
     sendEmail,
   } = useHomeController();
@@ -69,7 +74,16 @@ export default function Home() {
           <CustomButton text="Dark ui" handleClick={handleClickDarkUi} />
         </div>
       </LeftContainer>
-      <About bio={bio} isDarkUi={isDarkUi} />
+      {isAboutOPen && (
+        <About
+          toogleModal={handleProjectsPageOpen}
+          bio={bio}
+          isDarkUi={isDarkUi}
+        />
+      )}
+      {isProjectsOpen && (
+        <Projects toogleModal={handleAboutPageOpen} isDarkUi={isDarkUi} />
+      )}
     </BackGround>
   );
 }

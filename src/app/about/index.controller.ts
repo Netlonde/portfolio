@@ -9,6 +9,8 @@ function useHomeController() {
   const [name, setName] = useState("");
   const [bio, setBio] = useState("");
   const [isDarkUi, setIsDarkUi] = useState(false);
+  const [isAboutOPen, setIsAboutOPen] = useState(true);
+  const [isProjectsOpen, setIsProjectsOpen] = useState(false);
 
   async function getUserData() {
     const { avatar_url, email, name, bio } = await getGithubDataByName(
@@ -18,6 +20,16 @@ function useHomeController() {
     setEmail(email);
     setName(name);
     setBio(bio);
+  }
+
+  function handleAboutPageOpen() {
+    setIsAboutOPen(true);
+    setIsProjectsOpen(false);
+  }
+
+  function handleProjectsPageOpen() {
+    setIsAboutOPen(false);
+    setIsProjectsOpen(true);
   }
 
   function handleClickDarkUi() {
@@ -53,8 +65,12 @@ function useHomeController() {
     email,
     name,
     bio,
+    isProjectsOpen,
+    isAboutOPen,
     handleClickDarkUi,
     handleClickIcon,
+    handleAboutPageOpen,
+    handleProjectsPageOpen,
     sendEmail,
     isDarkUi,
   };

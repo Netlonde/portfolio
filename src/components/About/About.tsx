@@ -3,15 +3,16 @@ import { BackGround } from "./About.style";
 import { IAboutProps } from "./About.props";
 
 export default function About(props: IAboutProps) {
-  const { bio, isDarkUi } = props;
+  const { bio, isDarkUi, toogleModal } = props;
 
   return (
     <BackGround isdarkcolor={isDarkUi}>
       <div className="header">
         <h3 className="title">About</h3>
         <div className="headButtonsContainer">
-          <button className="buttonText">Resume</button>
-          <button className="buttonText">Projects</button>
+          <button className="buttonText" onClick={toogleModal}>
+            Projects
+          </button>
         </div>
       </div>
       <div className="description">
