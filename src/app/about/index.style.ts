@@ -51,7 +51,7 @@ export const LeftContainer = styled.div<IProps>`
         width: 100%;
         height: 30px;
         border-radius: 20px;
-        background-color: rgba(155, 155, 155, 0.35);
+        background-color: rgba(100, 100, 100, 0.33);
         display: flex;
         align-items: center;
         justify-content: center;
@@ -103,10 +103,10 @@ export const LeftContainer = styled.div<IProps>`
         align-items: flex-start;
         justify-content: center;
         flex-direction: column;
-        width: 100%;
+        width: 300px;
         height: 130px;
         padding: 0px 20px;
-        background-color: rgba(155, 155, 155, 0.35);
+        background-color: rgba(100, 100, 100, 0.33);
       }
 
       .userInfoText {
@@ -196,7 +196,7 @@ export const RightContainer = styled.div<IProps>`
         left: 0;
         background: ${isdarkcolor
           ? "rgba(155, 155, 155, 0.35)"
-          : "rgba(100, 100, 100, 0.5)"};
+          : "rgba(100, 100, 100, 0.33)"};
         padding: 10px 15px;
       }
 
